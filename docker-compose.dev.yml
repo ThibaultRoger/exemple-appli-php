@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  company-json-validator:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: company-json-validator-dev
+    working_dir: /app
+    # On monte les dossiers d'entrée/sortie pour voir les fichiers sur l'hôte
+    volumes:
+      - ./data/input:/app/data/input
+      - ./var/log:/app/var/log
+    command: ["php", "bin/console", "app:validate:companies", "data/input"]

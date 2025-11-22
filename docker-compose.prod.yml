@@ -1,0 +1,10 @@
+services:
+  company-json-validator:
+    image: ghcr.io/cogep/company-json-validator:latest
+    container_name: company-json-validator
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - /opt/company-json-validator/data/input:/app/data/input
+      - /opt/company-json-validator/var/log:/app/var/log
+    command: ["php", "bin/console", "app:validate:companies", "data/input"]

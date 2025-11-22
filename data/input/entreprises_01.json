@@ -1,0 +1,16 @@
+[
+  {
+    "siren": "123456789",
+    "phone": "+33123456789",
+    "address": "1 rue de la Paix, 75000 Paris",
+    "email": "contact@exemple.fr",
+    "capital": 10000
+  },
+  {
+    "siren": "ABC",
+    "phone": "12",
+    "address": "",
+    "email": "not-an-email",
+    "capital": -42
+  }
+]
